@@ -1,5 +1,5 @@
 FROM  node 
-
+MAINTAINER mikegcoleman@gmail.com
 
 # Bundle app source
 COPY . /src
