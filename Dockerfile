@@ -1,4 +1,3 @@
-#Adding a Comment
 FROM  node 
 
 MAINTAINER mikegcoleman@gmail.com
