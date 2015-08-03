@@ -1,5 +1,4 @@
 FROM  node 
-#comment
 
 MAINTAINER mikegcoleman@gmail.com
 
