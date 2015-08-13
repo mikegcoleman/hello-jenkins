@@ -1,12 +1,22 @@
-FROM  node 
-#comment
-
+FROM node:latest
 MAINTAINER mikegcoleman@gmail.com
 
-# Bundle app source
-COPY . /src
-# Install app dependencies
-RUN cd /src; npm install
+# set default workdir
+WORKDIR /usr/src
 
-EXPOSE  5000
-CMD ["node", "/src/app.js"]
+# Add package.json to allow for caching
+COPY package.json /usr/src/package.json
+
+# Install app dependencies
+RUN npm install
+
+# Bundle app source and tests
+COPY app.js /usr/src/
+COPY test /usr/src/test
+COPY script /usr/src/script
+
+# user to non-privileged user
+USER nobody
+
+EXPOSE 5000
+CMD ["node","app.js"]
