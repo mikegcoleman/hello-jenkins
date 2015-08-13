@@ -1,5 +1,5 @@
 FROM node:latest
-MAINTAINER mikegcoleman@gmail.com
+MAINTAINER mike.coleman@docker.com
 
 # set default workdir
 WORKDIR /usr/src
