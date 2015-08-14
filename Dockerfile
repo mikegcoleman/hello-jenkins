@@ -1,3 +1,4 @@
+#dockerfile comment
 FROM node:latest
 MAINTAINER mike.coleman@docker.com
 
