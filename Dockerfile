@@ -16,6 +16,7 @@ COPY app.js /usr/src/
 COPY test /usr/src/test
 COPY script /usr/src/script
 
+KKKUISSUECOMMAND issueparameter
 # user to non-privileged user
 USER nobody
 
